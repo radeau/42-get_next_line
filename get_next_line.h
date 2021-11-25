@@ -6,7 +6,7 @@
 /*   By: kpoquita <kpoquita@42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:23:54 by kpoquita          #+#    #+#             */
-/*   Updated: 2021/11/23 12:29:42 by kpoquita         ###   ########.fr       */
+/*   Updated: 2021/11/25 16:35:41 by kpoquita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@
 # endif
 
 char	*get_next_line(int fd);
-char    *ft_strchr(const char *str, int n);
+char	*ft_strchr(const char *str, int n);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-size_t  ft_strlen(const char *s);
-char    *ft_strdup(const char *str);
+size_t	ft_strlen(const char *s);
+char	*ft_strdup(const char *str);
 
 #endif
