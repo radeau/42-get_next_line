@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kpoquita <kpoquita@42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:23:10 by kpoquita          #+#    #+#             */
-/*   Updated: 2021/12/07 15:34:49 by kpoquita         ###   ########.fr       */
+/*   Updated: 2021/12/07 15:23:34 by kpoquita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <fcntl.h>
-#include <limits.h>
-#include <stdio.h>
+#include "get_next_line_bonus.h"
+//#include <fcntl.h>
+//#include <limits.h>
+//#include <stdio.h>
 
 void	free_mem(char **ptr)
 {
@@ -104,7 +104,7 @@ char	*get_next_line(int fd)
 	free_mem(&ret_read);
 	return (gnl_res);
 }
-
+/*
 int main(int argc, char *argv[])
 {
         int fd, lineCount;
@@ -130,3 +130,4 @@ int main(int argc, char *argv[])
         }
         return 0;
 }
+*/
