@@ -6,7 +6,7 @@
 /*   By: kpoquita <kpoquita@42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:23:54 by kpoquita          #+#    #+#             */
-/*   Updated: 2021/11/25 16:35:41 by kpoquita         ###   ########.fr       */
+/*   Updated: 2021/12/08 17:54:11 by kpoquita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-
+/*
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1
 # endif
-
+*/
 # ifndef FD_MAX
 #  define FD_MAX 256
 # endif

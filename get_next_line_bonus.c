@@ -6,7 +6,7 @@
 /*   By: kpoquita <kpoquita@42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:23:10 by kpoquita          #+#    #+#             */
-/*   Updated: 2021/12/07 15:23:34 by kpoquita         ###   ########.fr       */
+/*   Updated: 2021/12/08 18:23:51 by kpoquita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,9 +125,19 @@ int main(int argc, char *argv[])
                         printf("line is ==> %s | lineCount: %d\n", line, lineCount);
                         lineCount++;
                 }
-//              printf("line is ==> %s | lineCount: %d\n", line, lineCount);
                 close(fd);
         }
         return 0;
+}*/
+/*
+int	main(int ac, char **av)
+{
+  --ac && (ac = open(av[1], O_RDONLY));
+  while (*av = get_next_line(ac))
+    {
+      puts(*av);
+      free(*av);
+    }
+  return (0);
 }
 */

@@ -6,14 +6,14 @@
 /*   By: kpoquita <kpoquita@42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 23:23:10 by kpoquita          #+#    #+#             */
-/*   Updated: 2021/12/07 15:34:49 by kpoquita         ###   ########.fr       */
+/*   Updated: 2021/12/08 18:21:18 by kpoquita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <fcntl.h>
-#include <limits.h>
-#include <stdio.h>
+//#include <fcntl.h>
+//#include <limits.h>
+//#include <stdio.h>
 
 void	free_mem(char **ptr)
 {
@@ -104,7 +104,7 @@ char	*get_next_line(int fd)
 	free_mem(&ret_read);
 	return (gnl_res);
 }
-
+/*
 int main(int argc, char *argv[])
 {
         int fd, lineCount;
@@ -122,11 +122,30 @@ int main(int argc, char *argv[])
                         line = get_next_line(fd);
                         if (line == NULL)
                                 exit(1);
-                        printf("line is ==> %s | lineCount: %d\n", line, lineCount);
+			printf("%s", line);
+                        //printf("line is ==> %s | lineCount: %d\n", line, lineCount);
                         lineCount++;
                 }
-//              printf("line is ==> %s | lineCount: %d\n", line, lineCount);
+		if (fd == 0)
+		{
+			while ((line = get_next_line(0)) != NULL)
+      				printf("Next line -> %s", line);
+		}
                 close(fd);
         }
+
+	if (argc < 2)
+	{
+		while ((line = get_next_line(0)) != NULL)
+		{
+      			printf("Next line -> %s", line);
+		}
+	}
         return 0;
 }
+*/
+/*
+char *line;
+while ((line = get_next_line(0)) != NULL)
+      printf("Next line -> %s", line);
+*/
