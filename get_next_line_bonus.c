@@ -11,9 +11,6 @@
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
-//#include <fcntl.h>
-//#include <limits.h>
-//#include <stdio.h>
 
 void	free_mem(char **ptr)
 {
@@ -22,20 +19,6 @@ void	free_mem(char **ptr)
 		free(*ptr);
 		ptr = NULL;
 	}
-}
-
-char	*ft_strchr(const char *str, int n)
-{
-	char	*tmp;
-
-	tmp = (char *) str;
-	while (*tmp != (char)n)
-	{
-		if (*tmp == 0)
-			return (NULL);
-		tmp++;
-	}
-	return ((char *)tmp);
 }
 
 char	*gnl_ret_line(char **buffer, int line_index)
@@ -104,40 +87,3 @@ char	*get_next_line(int fd)
 	free_mem(&ret_read);
 	return (gnl_res);
 }
-/*
-int main(int argc, char *argv[])
-{
-        int fd, lineCount;
-        char *line;
-
-        line = malloc(1 *sizeof(char));
-        lineCount = 1;
-
-        if (argc == 2)
-        {
-                fd = open(argv[1], O_RDONLY);
-                while (line != NULL)
-                {
-                        free(line);
-                        line = get_next_line(fd);
-                        if (line == NULL)
-                                exit(1);
-                        printf("line is ==> %s | lineCount: %d\n", line, lineCount);
-                        lineCount++;
-                }
-                close(fd);
-        }
-        return 0;
-}*/
-/*
-int	main(int ac, char **av)
-{
-  --ac && (ac = open(av[1], O_RDONLY));
-  while (*av = get_next_line(ac))
-    {
-      puts(*av);
-      free(*av);
-    }
-  return (0);
-}
-*/

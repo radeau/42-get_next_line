@@ -11,9 +11,6 @@
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-//#include <fcntl.h>
-//#include <limits.h>
-//#include <stdio.h>
 
 void	free_mem(char **ptr)
 {
@@ -22,20 +19,6 @@ void	free_mem(char **ptr)
 		free(*ptr);
 		ptr = NULL;
 	}
-}
-
-char	*ft_strchr(const char *str, int n)
-{
-	char	*tmp;
-
-	tmp = (char *) str;
-	while (*tmp != (char)n)
-	{
-		if (*tmp == 0)
-			return (NULL);
-		tmp++;
-	}
-	return ((char *)tmp);
 }
 
 char	*gnl_ret_line(char **buffer, int line_index)
@@ -104,48 +87,3 @@ char	*get_next_line(int fd)
 	free_mem(&ret_read);
 	return (gnl_res);
 }
-/*
-int main(int argc, char *argv[])
-{
-        int fd, lineCount;
-        char *line;
-
-        line = malloc(1 *sizeof(char));
-        lineCount = 1;
-
-        if (argc == 2)
-        {
-                fd = open(argv[1], O_RDONLY);
-                while (line != NULL)
-                {
-                        free(line);
-                        line = get_next_line(fd);
-                        if (line == NULL)
-                                exit(1);
-			printf("%s", line);
-                        //printf("line is ==> %s | lineCount: %d\n", line, lineCount);
-                        lineCount++;
-                }
-		if (fd == 0)
-		{
-			while ((line = get_next_line(0)) != NULL)
-      				printf("Next line -> %s", line);
-		}
-                close(fd);
-        }
-
-	if (argc < 2)
-	{
-		while ((line = get_next_line(0)) != NULL)
-		{
-      			printf("Next line -> %s", line);
-		}
-	}
-        return 0;
-}
-*/
-/*
-char *line;
-while ((line = get_next_line(0)) != NULL)
-      printf("Next line -> %s", line);
-*/
