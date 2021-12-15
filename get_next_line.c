@@ -27,7 +27,6 @@ char	*gnl_ret_line(char **buffer, int line_index)
 	char	*line;
 
 	tmp = NULL;
-
 	if (line_index <= 0 )
 	{
 		if (**buffer == '\0')
@@ -52,7 +51,7 @@ char	*gnl_line_read(char **buffer, char *ret_read, int fd)
 	char	*n_line;
 	char	*tmp;
 	ssize_t	size_read;
-	
+
 	n_line = ft_strchr(*buffer, '\n');
 	tmp = NULL;
 	size_read = 0;
@@ -80,7 +79,7 @@ char	*get_next_line(int fd)
 		return (NULL);
 	ret_read = (char *) malloc(sizeof(char) * BUFFER_SIZE + 1);
 	if (!ret_read)
-		return NULL;
+		return (NULL);
 	if (!buffer[fd])
 		buffer[fd] = ft_strdup("");
 	gnl_res = gnl_line_read(&buffer[fd], ret_read, fd);
