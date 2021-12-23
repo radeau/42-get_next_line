@@ -5,11 +5,10 @@
 
 int main(int argc, char *argv[])
 {
-        int fd, lineCount;
+        int fd;
         char *line;
 
         line = malloc(1 *sizeof(char));
-        lineCount = 1;
 
         if (argc == 2)
         {
@@ -21,7 +20,6 @@ int main(int argc, char *argv[])
                         if (line == NULL)
                                 exit(1);
 			printf("%s", line);
-                        lineCount++;
                 }
 		if (fd == 0)
 		{

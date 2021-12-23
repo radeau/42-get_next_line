@@ -21,7 +21,7 @@ void	free_mem(char **ptr)
 	}
 }
 
-char	*gnl_ret_line(char **buffer, int line_index)
+char	*ret_line(char **buffer, int line_index)
 {
 	char	*tmp;
 	char	*line;
@@ -47,7 +47,7 @@ char	*gnl_ret_line(char **buffer, int line_index)
 	return (line);
 }
 
-char	*gnl_line_read(char **buffer, char *ret_read, int fd)
+char	*line_read(char **buffer, char *ret_read, int fd)
 {	
 	char	*n_line;
 	char	*tmp;
@@ -60,14 +60,14 @@ char	*gnl_line_read(char **buffer, char *ret_read, int fd)
 	{
 		size_read = read(fd, ret_read, BUFFER_SIZE);
 		if (size_read <= 0)
-			return (gnl_ret_line(buffer, size_read));
+			return (ret_line(buffer, size_read));
 		ret_read[size_read] = '\0';
 		tmp = ft_strjoin(*buffer, ret_read);
 		free_mem(buffer);
 		*buffer = tmp;
 		n_line = ft_strchr(*buffer, '\n');
 	}
-	return (gnl_ret_line(buffer, n_line - *buffer + 1));
+	return (ret_line(buffer, n_line - *buffer + 1));
 }
 
 char	*get_next_line(int fd)
@@ -83,7 +83,7 @@ char	*get_next_line(int fd)
 		return NULL;
 	if (!buffer[fd])
 		buffer[fd] = ft_strdup("");
-	gnl_res = gnl_line_read(&buffer[fd], ret_read, fd);
+	gnl_res = line_read(&buffer[fd], ret_read, fd);
 	free_mem(&ret_read);
 	return (gnl_res);
 }
