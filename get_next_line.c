@@ -71,6 +71,7 @@ char	*line_read(char **buffer, char *ret_read, int fd)
 
 char	*get_next_line(int fd)
 {
+	// FD_MAX gives you the minimum number of streams that can be open simultaneously
 	static char	*buffer[FD_MAX + 1];
 	char		*ret_read;
 	char		*gnl_res;

@@ -21,12 +21,6 @@ int main(int argc, char *argv[])
                                 exit(1);
 			printf("%s", line);
                 }
-		if (fd == 0)
-		{
-			while ((line = get_next_line(0)) != NULL)
-      				printf("Next line -> %s", line);
-		}
-                close(fd);
         }
 
 	if (argc < 2)
