@@ -1,22 +1,25 @@
-# get_next_line - @42AbuDhabi
+#   get_next_line
 
-[![42Project Score](https://badge42.herokuapp.com/api/project/kpoquita/get_next_line)](https://github.com/JaeSeoKim/badge42)
-
-The project aims you to code a function that will return a **line** read from a **file descriptor**.
+The `get_next_line` project is a programming task that requires you to write a function that reads a line from a file descriptor (fd) and returns it as a string. The aim of the project is to help you improve your skills in file descriptor manipulation and dynamic memory allocation.
 
 ## Function Prototype
 
-```c
-char		*get_next_line(int	fd)
-```
+The function prototype for `get_next_line` is as follows:
 
-The program will be compiled in this way:
-```
-gcc -Wall -Wextra -Werror -D BUFFER_SIZE=xx <files>.c
-```
-Your read must use the BUFFER_SIZE defined during compilation to read from
-a file or from stdin. The **xx** will be modified for testing purposes.
+`char *get_next_line(int fd)` 
+
+The function takes a file descriptor as a parameter and returns a pointer to a string containing the next line from the file associated with that file descriptor. The function will return `NULL` if there are no more lines to read or an error occurs.
+
+## Compilation
+
+The program will be compiled in the following way:
+
+`gcc -Wall -Wextra -Werror -D BUFFER_SIZE=xx <files>.c` 
+
+The `BUFFER_SIZE` macro must be defined during compilation, and it specifies the size of the buffer used for reading from the file descriptor. The `xx` will be replaced with the value used for testing purposes.
 
 ## Third-party Tester
 
-[Tripouille](https://github.com/Tripouille/gnlTester)
+You can use the [gnlTester](https://github.com/Tripouille/gnlTester) third-party tester to validate the correctness of your `get_next_line` implementation.
+
+This project is a great opportunity to improve C programming skills, particularly in areas such as file descriptor manipulation, dynamic memory allocation, and error handling.
